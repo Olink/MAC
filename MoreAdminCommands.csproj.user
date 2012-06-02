@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <StartWorkingDirectory>C:\Users\Michael\Downloads\Tshock1.1.1\Tshock1.1.1\</StartWorkingDirectory>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Michael\Downloads\Tshock1.1.1\Tshock1.1.1\TerrariaSerl.exe</StartProgram>
+  </PropertyGroup>
+</Project>

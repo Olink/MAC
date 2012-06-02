@@ -1,0 +1,18 @@
+C:\Users\Michael\Downloads\TShock Current\ServerPlugins\TShockAPI.XML
+C:\Users\Michael\Downloads\TShockPluginTemplate3\TShockPluginTemplate\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Michael\Downloads\TShock Test\ServerPlugins\TShockAPI.XML
+C:\Users\Michael\Downloads\TShock Test\ServerPlugins\MoreAdminCommands.dll
+C:\Users\Michael\Downloads\TShock Test\ServerPlugins\MoreAdminCommands.pdb
+C:\Users\Michael\Downloads\TShockPluginTemplate3\TShockPluginTemplate\obj\x86\Debug\MoreAdminCommands.dll
+C:\Users\Michael\Downloads\TShockPluginTemplate3\TShockPluginTemplate\obj\x86\Debug\MoreAdminCommands.pdb
+C:\Users\Michael\Downloads\TShock Current\ServerPlugins\MoreAdminCommands.dll
+C:\Users\Michael\Downloads\TShock Current\ServerPlugins\MoreAdminCommands.pdb
+C:\Users\Michael\Downloads\MoreAdminCommands\TShockPluginTemplate\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Michael\Downloads\MoreAdminCommands\TShockPluginTemplate\obj\x86\Debug\MoreAdminCommands.dll
+C:\Users\Michael\Downloads\MoreAdminCommands\TShockPluginTemplate\obj\x86\Debug\MoreAdminCommands.pdb
+C:\Users\Michael\Downloads\TShock 3.3.4.924\ServerPlugins\MoreAdminCommands.dll
+C:\Users\Michael\Downloads\TShock 3.3.4.924\ServerPlugins\MoreAdminCommands.pdb
+C:\Users\Michael\Downloads\TShock 3.3.4.924\ServerPlugins\TShockAPI.XML
+C:\Users\Michael\Downloads\TShock Buggy\ServerPlugins\TShockAPI.XML
+C:\Users\Michael\Downloads\TShock Buggy\ServerPlugins\MoreAdminCommands.dll
+C:\Users\Michael\Downloads\TShock Buggy\ServerPlugins\MoreAdminCommands.pdb
