@@ -16,7 +16,7 @@ using System.Threading;
 
 namespace MoreAdminCommands
 {
-    [APIVersion(1, 11)]
+    [APIVersion(1, 12)]
     public class MoreAdminCommands : TerrariaPlugin
     {
         public static SqlTableEditor SQLEditor;
@@ -207,7 +207,7 @@ namespace MoreAdminCommands
 
             }
             Commands.ChatCommands.Add(new Command("ghostmode", Ghost, "ghost"));
-            Commands.ChatCommands.Add(new Command("time", FreezeTime, "freezetime"));
+            Commands.ChatCommands.Add(new Command("freezetime", FreezeTime, "freezetime"));
             Commands.ChatCommands.Add(new Command("spawnmob", SpawnMobPlayer, "spawnmobplayer"));
             Commands.ChatCommands.Add(new Command("spawnmob", SpawnAll, "spawnall"));
             Commands.ChatCommands.Add(new Command("spawnmob", SpawnGroup, "spawngroup"));
@@ -220,7 +220,7 @@ namespace MoreAdminCommands
             Commands.ChatCommands.Add(new Command("permabuff", permaBuff, "permabuff"));
             Commands.ChatCommands.Add(new Command("permabuff", permaBuffAll, "permabuffall"));
             Commands.ChatCommands.Add(new Command("permabuff", permaBuffGroup, "permabuffgroup"));
-            Commands.ChatCommands.Add(new Command("item", ForceGive, "forcegive"));
+            Commands.ChatCommands.Add(new Command("forcegive", ForceGive, "forcegive"));
             Commands.ChatCommands.Add(new Command("killall", KillAll, "killall"));
             Commands.ChatCommands.Add(new Command("mute", Mute, "mute"));
             Commands.ChatCommands.Add(new Command("mute", PermaMute, "permamute"));
@@ -367,24 +367,8 @@ namespace MoreAdminCommands
 
             if (args.Parameters.Count > 1)
             {
-                string str = "";
-                for (int i = 1; i < args.Parameters.Count; i++)
-                {
-
-                    if (i != args.Parameters.Count - 1)
-                    {
-
-                        str += args.Parameters[i] + " ";
-
-                    }
-                    else
-                    {
-
-                        str += args.Parameters[i];
-
-                    }
-
-                }
+                string str = string.Join(" ", args.Parameters.GetRange(1, args.Parameters.Count - 1));
+                
                 switch (args.Parameters[0].ToLower())
                 {
 
@@ -2966,10 +2950,9 @@ namespace MoreAdminCommands
 
                 using (StreamReader file = new StreamReader(@"tshock/MoreCommandsConfig.txt", true))
                 {
-                    string[] theString = (file.ReadToEnd()).Split('\n');
-                    foreach (string currentLine in theString)
+                    string currentLine = null;
+                    while ((currentLine = file.ReadLine()) != null)
                     {
-
                         if (currentLine.StartsWith("defaultMuteAllMessage:"))
                         {
                             string tempLine = currentLine;
