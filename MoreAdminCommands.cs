@@ -239,12 +239,32 @@ namespace MoreAdminCommands
             Commands.ChatCommands.Add(new Command("forcepvp", CanOffPvP, "canoffpvp"));
             Commands.ChatCommands.Add(new Command("antitp", TPOff, "tpoff"));
             Commands.ChatCommands.Add(new Command("moonphase", MoonPhase, "moonphase"));
-
+            Commands.ChatCommands.Add(new Command("findperm", FindPerms, "findperm"));
         }
 
         private DateTime LastCheck = DateTime.UtcNow;
         private DateTime OtherLastCheck = DateTime.UtcNow;
-
+		
+        public static void FindPerms(CommandArgs args)
+        {
+        	if (args.Parameters.Count == 1)
+        	{
+	        	foreach (Command cmd in TShockAPI.Commands.ChatCommands)
+	        	{
+	        		if (cmd.Names.Contains(args.Parameters[0]))
+	        		{
+	        			args.Player.SendInfoMessage(string.Format("Permission to use {0}: {1}", cmd.Name, cmd.Permission != "" ? cmd.Permission : "Nothing"));
+	        			return;
+	        		}
+	        	}
+	        	args.Player.SendErrorMessage("That command could not be found.");
+        	}
+        	else
+        	{
+        		args.Player.SendErrorMessage("Too many or not enough parameters. The format is: /findperm [command name]");
+        	}
+        }
+        
         public static void MoonPhase(CommandArgs args)
         {
 
